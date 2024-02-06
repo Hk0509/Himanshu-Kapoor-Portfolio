@@ -38,8 +38,9 @@ const Contact = () => {
       .sendForm(
         serviceId,
         templateId,
-        formRef.current,
-        userId
+        formRef.current,{
+        publicKey: userId
+        }
       )
       .then(
         (result) => {
