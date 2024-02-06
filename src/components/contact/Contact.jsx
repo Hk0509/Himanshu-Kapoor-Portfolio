@@ -2,11 +2,7 @@ import { useRef, useState } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import emailjsConfig from '../../../emailjsConfig.env';
-
-const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-const userId = process.env.REACT_APP_EMAILJS_USER_ID;
+// import emailjsConfig from '../../../emailjsConfig.env';
 
 const variants = {
   initial: {
@@ -23,6 +19,10 @@ const variants = {
   },
 };
 
+const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+const userId = process.env.REACT_APP_EMAILJS_USER_ID;
+
 const Contact = () => {
   const ref = useRef();
   const formRef = useRef();
@@ -38,9 +38,8 @@ const Contact = () => {
       .sendForm(
         serviceId,
         templateId,
-        formRef.current,{
-        publicKey: userId
-        }
+        formRef.current,
+        userId
       )
       .then(
         (result) => {
