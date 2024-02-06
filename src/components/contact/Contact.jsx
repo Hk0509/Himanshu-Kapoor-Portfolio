@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
-// import emailjsConfig from '../../../emailjsConfig.env';
+import emailjsConfig from '../../emailjsConfig.js';
 
 const variants = {
   initial: {
@@ -26,10 +26,6 @@ const Contact = () => {
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
   
-  const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-  const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
-  const userId = process.env.REACT_APP_EMAILJS_USER_ID;
-  
   const isInView = useInView(ref, { margin: "-100px" });
 
   const sendEmail = (e) => {
@@ -37,10 +33,10 @@ const Contact = () => {
   
     emailjs
       .sendForm(
-        serviceId,
-        templateId,
+        emailjsConfig.serviceId,
+        emailjsConfig.templateId,
         formRef.current,
-        userId
+        emailjsConfig.userId
       )
       .then(
         (result) => {
