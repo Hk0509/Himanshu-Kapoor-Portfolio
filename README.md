@@ -1,6 +1,6 @@
 # 🚀 My Portfolio
 
-Welcome to my personal portfolio web app! This project is a showcase of my skills, projects, and experiences built using React, SCSS, and Framer Motion.
+Explore my professional journey and skill set through this meticulously crafted personal portfolio, powered by React.js. Witness the seamless integration of design and technology, showcasing a commitment to excellence in every line of code.
 
 **Explore it live: 🌐[Portfolio](https://himanshukapoor.vercel.app/)**
 
