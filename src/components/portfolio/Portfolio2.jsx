@@ -6,7 +6,7 @@ import Project from './Project';
 const items = [
     {
         id: 1,
-        title: "Foodie’s Fortres",
+        title: "Foodie's Fortress",
         img: "Foodies.png",
         desc: "A user-friendly food delivery React app, streamlining order placement, enhancing cart functionality, and optimizing food selection through intuitive filtering. Employed modern, minimalist UI principles to ensure easy navigation, featuring dedicated pages for meal details, order management, and user registration App for clothing store where users can surf various products and can also buy products via card or ethereum payment",
         github:"https://github.com/Hk0509/Foodies-Fortress",
